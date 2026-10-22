@@ -4,59 +4,1283 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@6.0.0-alpha.1/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-B/GM4XqrwHnWXNOWMbloTmrYXZg10cakYGmpfsR/bbzQ6JAJI4ihuyADKLnBgrCe" crossorigin="anonymous">
+    <title>Asad Mukhtar — Professional</title>
+    <!-- Bootstrap 5.3.8 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <!-- Font Awesome 4.7.0 -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css">
+    <style>
+        /* ---- Professional palette ---- */
+        :root {
+            --navy: #0f172a;
+            --navy-light: #1e293b;
+            --accent: #3b82f6;
+            --accent-dark: #2563eb;
+            --text-muted: #cbd5e1;
+            --body-text: #475569;
+            --card-bg: #ffffff;
+            --border-soft: #e2e8f0;
+        }
 
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 80px;
+        }
+
+        body {
+            font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            background: #f8fafc;
+            color: var(--body-text);
+        }
+
+        /* ============================================================
+           NAVBAR
+           ============================================================ */
+        .navbar-pro {
+            background-color: var(--navy);
+            padding: 0.65rem 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+            transition: box-shadow 0.25s ease;
+        }
+
+        .navbar-pro .navbar-brand {
+            font-weight: 600;
+            letter-spacing: 0.3px;
+            color: #ffffff !important;
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+            font-size: 1.15rem;
+        }
+
+        .navbar-pro .navbar-brand .brand-mark {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 34px;
+            height: 34px;
+            border-radius: 8px;
+            background: linear-gradient(135deg, var(--accent), #6366f1);
+            color: #fff;
+            font-size: 0.95rem;
+        }
+
+        .navbar-pro .navbar-nav .nav-link {
+            color: var(--text-muted) !important;
+            font-size: 0.9rem;
+            font-weight: 500;
+            letter-spacing: 0.2px;
+            padding: 0.5rem 1rem !important;
+            border-radius: 6px;
+            transition: color 0.2s ease, background-color 0.2s ease;
+            display: flex;
+            align-items: center;
+            gap: 0.45rem;
+        }
+
+        .navbar-pro .navbar-nav .nav-link i {
+            font-size: 0.85rem;
+            opacity: 0.85;
+            width: 1rem;
+            text-align: center;
+        }
+
+        .navbar-pro .navbar-nav .nav-link:hover,
+        .navbar-pro .navbar-nav .nav-link:focus {
+            color: #ffffff !important;
+            background-color: rgba(255, 255, 255, 0.07);
+        }
+
+        .navbar-pro .navbar-nav .nav-link.active {
+            color: #ffffff !important;
+            background-color: rgba(59, 130, 246, 0.18);
+        }
+
+        .navbar-pro .navbar-nav .nav-link.active i {
+            opacity: 1;
+            color: var(--accent);
+        }
+
+        .navbar-pro .nav-divider {
+            width: 1px;
+            height: 22px;
+            background: rgba(255, 255, 255, 0.15);
+            margin: 0 0.75rem;
+            align-self: center;
+        }
+
+        .btn-nav-cta {
+            background-color: var(--accent);
+            border: 1px solid var(--accent);
+            color: #fff !important;
+            font-size: 0.875rem;
+            font-weight: 500;
+            padding: 0.45rem 1.1rem;
+            border-radius: 6px;
+            transition: background-color 0.2s ease, box-shadow 0.2s ease;
+            text-decoration: none;
+        }
+
+        .btn-nav-cta:hover {
+            background-color: var(--accent-dark);
+            border-color: var(--accent-dark);
+            box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.25);
+            color: #fff !important;
+        }
+
+        .navbar-pro .navbar-toggler {
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            padding: 0.4rem 0.6rem;
+            border-radius: 6px;
+        }
+
+        .navbar-pro .navbar-toggler:focus {
+            box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.35);
+        }
+
+        .navbar-pro .navbar-toggler-icon {
+            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255,255,255,0.85%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+        }
+
+        @media (max-width: 991.98px) {
+            .navbar-pro .navbar-collapse {
+                padding-top: 0.75rem;
+                margin-top: 0.5rem;
+                border-top: 1px solid rgba(255, 255, 255, 0.08);
+            }
+
+            .navbar-pro .navbar-nav .nav-link {
+                padding: 0.6rem 0.75rem !important;
+            }
+
+            .navbar-pro .nav-divider {
+                display: none;
+            }
+
+            .navbar-pro .nav-cta-wrapper {
+                margin-top: 0.5rem;
+                padding-top: 0.5rem;
+                border-top: 1px solid rgba(255, 255, 255, 0.08);
+            }
+        }
+
+        .navbar-pro.scrolled {
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+        }
+
+        /* ============================================================
+           HERO SECTION
+           ============================================================ */
+        .hero-section {
+            background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+            color: #fff;
+            padding: 5rem 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-section::before {
+            content: "";
+            position: absolute;
+            top: -50%;
+            right: -20%;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(59, 130, 246, 0.18) 0%, transparent 70%);
+            pointer-events: none;
+        }
+
+        .hero-section h1 {
+            font-weight: 700;
+            letter-spacing: -0.5px;
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero-section p {
+            color: rgba(255, 255, 255, 0.78);
+            font-size: 1.05rem;
+            line-height: 1.7;
+            max-width: 620px;
+            margin-bottom: 1.75rem;
+        }
+
+        .hero-section .hero-search {
+            max-width: 460px;
+        }
+
+        .hero-section .hero-search .form-control {
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.18);
+            color: #fff;
+            padding: 0.65rem 1rem;
+            border-radius: 8px;
+        }
+
+        .hero-section .hero-search .form-control::placeholder {
+            color: rgba(255, 255, 255, 0.55);
+        }
+
+        .hero-section .hero-search .form-control:focus {
+            background: rgba(255, 255, 255, 0.12);
+            border-color: var(--accent);
+            box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.25);
+            color: #fff;
+        }
+
+        .hero-section .hero-search .btn-search {
+            background: var(--accent);
+            border: 1px solid var(--accent);
+            color: #fff;
+            padding: 0.65rem 1.15rem;
+            border-radius: 8px;
+            transition: background-color 0.2s ease;
+        }
+
+        .hero-section .hero-search .btn-search:hover {
+            background: var(--accent-dark);
+            border-color: var(--accent-dark);
+        }
+
+        /* ============================================================
+           SHARED SECTION HEADINGS
+           ============================================================ */
+        .section-heading {
+            text-align: left;
+            margin-bottom: 3rem;
+        }
+
+        .section-heading .eyebrow {
+            display: inline-block;
+            font-size: 0.75rem;
+            font-weight: 600;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            color: var(--accent);
+            background: rgba(59, 130, 246, 0.1);
+            padding: 0.3rem 0.85rem;
+            border-radius: 20px;
+            margin-bottom: 0.85rem;
+        }
+
+        .section-heading h2 {
+            font-weight: 700;
+            color: var(--navy);
+            letter-spacing: -0.4px;
+            font-size: 2rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .section-heading p {
+            color: var(--body-text);
+            max-width: 560px;
+            margin: 0;
+        }
+
+        /* ============================================================
+           ABOUT SECTION
+           ============================================================ */
+        .section-about {
+            padding: 5rem 0;
+            background: #ffffff;
+        }
+
+        .section-about h2 {
+            font-weight: 700;
+            color: var(--navy);
+            letter-spacing: -0.3px;
+            margin-bottom: 1.25rem;
+            position: relative;
+            padding-bottom: 0.75rem;
+        }
+
+        .section-about h2::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 48px;
+            height: 3px;
+            background: var(--accent);
+            border-radius: 3px;
+        }
+
+        .section-about p {
+            line-height: 1.75;
+            color: var(--body-text);
+            font-size: 1rem;
+        }
+
+        .section-about .about-img-wrapper {
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 12px 32px rgba(15, 23, 42, 0.12);
+            height: 100%;
+            min-height: 360px;
+        }
+
+        .section-about .about-img-wrapper img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        /* ============================================================
+           SERVICES SECTION
+           ============================================================ */
+        .section-services {
+            padding: 5rem 0;
+            background: #f1f5f9;
+        }
+
+        .service-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border-soft);
+            border-radius: 14px;
+            padding: 2rem 1.75rem;
+            height: 100%;
+            transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .service-card::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: var(--accent);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.3s ease;
+        }
+
+        .service-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 16px 36px rgba(15, 23, 42, 0.1);
+            border-color: transparent;
+        }
+
+        .service-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .service-card .service-icon {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 56px;
+            height: 56px;
+            border-radius: 12px;
+            background: rgba(59, 130, 246, 0.1);
+            color: var(--accent);
+            font-size: 1.4rem;
+            margin-bottom: 1.25rem;
+            transition: background-color 0.25s ease, color 0.25s ease;
+        }
+
+        .service-card:hover .service-icon {
+            background: var(--accent);
+            color: #fff;
+        }
+
+        .service-card h5 {
+            font-weight: 600;
+            color: var(--navy);
+            font-size: 1.15rem;
+            margin-bottom: 0.75rem;
+            letter-spacing: -0.2px;
+        }
+
+        .service-card p {
+            color: var(--body-text);
+            font-size: 0.95rem;
+            line-height: 1.7;
+            margin-bottom: 1.25rem;
+        }
+
+        .service-card .service-link {
+            font-size: 0.875rem;
+            font-weight: 600;
+            color: var(--accent);
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            transition: gap 0.2s ease;
+        }
+
+        .service-card .service-link:hover {
+            gap: 0.65rem;
+            color: var(--accent-dark);
+        }
+
+        /* ============================================================
+           PRODUCTS SECTION
+           ============================================================ */
+        .section-products {
+            padding: 5rem 0;
+            background: #ffffff;
+        }
+
+        .product-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border-soft);
+            border-radius: 14px;
+            overflow: hidden;
+            height: 100%;
+            transition: transform 0.25s ease, box-shadow 0.25s ease;
+        }
+
+        .product-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 16px 36px rgba(15, 23, 42, 0.1);
+        }
+
+        .product-card .product-media {
+            position: relative;
+            height: 200px;
+            background: linear-gradient(135deg, #e0e7ff 0%, #f1f5f9 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        .product-card .product-media i {
+            font-size: 3.5rem;
+            color: var(--accent);
+            opacity: 0.85;
+            transition: transform 0.3s ease, opacity 0.3s ease;
+        }
+
+        .product-card:hover .product-media i {
+            transform: scale(1.1);
+            opacity: 1;
+        }
+
+        .product-card .product-badge {
+            position: absolute;
+            top: 12px;
+            left: 12px;
+            background: var(--accent);
+            color: #fff;
+            font-size: 0.7rem;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+            padding: 0.3rem 0.7rem;
+            border-radius: 20px;
+        }
+
+        .product-card .product-body {
+            padding: 1.5rem;
+        }
+
+        .product-card h5 {
+            font-weight: 600;
+            color: var(--navy);
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+            letter-spacing: -0.2px;
+        }
+
+        .product-card p {
+            color: var(--body-text);
+            font-size: 0.9rem;
+            line-height: 1.7;
+            margin-bottom: 1rem;
+        }
+
+        .product-card .product-price {
+            font-weight: 700;
+            font-size: 1.25rem;
+            color: var(--navy);
+            margin-bottom: 1rem;
+        }
+
+        .product-card .product-price span {
+            font-size: 0.8rem;
+            font-weight: 500;
+            color: var(--body-text);
+        }
+
+        .btn-product {
+            background: transparent;
+            border: 1px solid var(--accent);
+            color: var(--accent);
+            font-size: 0.85rem;
+            font-weight: 600;
+            padding: 0.45rem 1rem;
+            border-radius: 6px;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            transition: background-color 0.2s ease, color 0.2s ease;
+        }
+
+        .btn-product:hover {
+            background: var(--accent);
+            color: #fff;
+        }
+
+        /* ============================================================
+           CONTACT SECTION
+           ============================================================ */
+        .section-contact {
+            padding: 5rem 0;
+            background: #f1f5f9;
+        }
+
+        .contact-info-card {
+            background: var(--navy);
+            color: #fff;
+            border-radius: 14px;
+            padding: 2.5rem 2rem;
+            height: 100%;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .contact-info-card::before {
+            content: "";
+            position: absolute;
+            bottom: -40%;
+            right: -20%;
+            width: 300px;
+            height: 300px;
+            background: radial-gradient(circle, rgba(59, 130, 246, 0.25) 0%, transparent 70%);
+            pointer-events: none;
+        }
+
+        .contact-info-card h4 {
+            font-weight: 700;
+            margin-bottom: 1rem;
+            letter-spacing: -0.3px;
+        }
+
+        .contact-info-card p {
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 0.95rem;
+            line-height: 1.7;
+            margin-bottom: 2rem;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .contact-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .contact-item .contact-icon {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 42px;
+            height: 42px;
+            border-radius: 10px;
+            background: rgba(59, 130, 246, 0.18);
+            color: var(--accent);
+            font-size: 1rem;
+            flex-shrink: 0;
+        }
+
+        .contact-item .contact-text h6 {
+            font-weight: 600;
+            font-size: 0.9rem;
+            margin-bottom: 0.2rem;
+            color: #fff;
+        }
+
+        .contact-item .contact-text span {
+            font-size: 0.875rem;
+            color: rgba(255, 255, 255, 0.65);
+        }
+
+        .contact-form-card {
+            background: #ffffff;
+            border: 1px solid var(--border-soft);
+            border-radius: 14px;
+            padding: 2.5rem 2rem;
+            height: 100%;
+            box-shadow: 0 12px 32px rgba(15, 23, 42, 0.06);
+        }
+
+        .contact-form-card .form-label {
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--navy);
+            margin-bottom: 0.4rem;
+        }
+
+        .contact-form-card .form-control {
+            border: 1px solid var(--border-soft);
+            border-radius: 8px;
+            padding: 0.65rem 1rem;
+            font-size: 0.95rem;
+            color: var(--body-text);
+            transition: border-color 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .contact-form-card .form-control:focus {
+            border-color: var(--accent);
+            box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.15);
+        }
+
+        .contact-form-card textarea.form-control {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        .btn-contact-submit {
+            background: var(--accent);
+            border: 1px solid var(--accent);
+            color: #fff;
+            font-weight: 600;
+            font-size: 0.9rem;
+            padding: 0.65rem 1.5rem;
+            border-radius: 8px;
+            transition: background-color 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .btn-contact-submit:hover {
+            background: var(--accent-dark);
+            border-color: var(--accent-dark);
+            box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.25);
+            color: #fff;
+        }
+
+        /* ============================================================
+           FOOTER
+           ============================================================ */
+        .footer-pro {
+            background: var(--navy);
+            color: rgba(255, 255, 255, 0.7);
+            padding: 4rem 0 0;
+        }
+
+        .footer-pro .footer-brand {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.6rem;
+            font-weight: 600;
+            color: #fff;
+            font-size: 1.2rem;
+            text-decoration: none;
+            margin-bottom: 1rem;
+        }
+
+        .footer-pro .footer-brand .brand-mark {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 34px;
+            height: 34px;
+            border-radius: 8px;
+            background: linear-gradient(135deg, var(--accent), #6366f1);
+            color: #fff;
+            font-size: 0.95rem;
+        }
+
+        .footer-pro p.footer-about {
+            font-size: 0.9rem;
+            line-height: 1.75;
+            color: rgba(255, 255, 255, 0.6);
+            max-width: 320px;
+            margin-bottom: 1.5rem;
+        }
+
+        .footer-pro h6.footer-heading {
+            color: #fff;
+            font-weight: 600;
+            font-size: 0.95rem;
+            letter-spacing: 0.3px;
+            margin-bottom: 1.25rem;
+        }
+
+        .footer-pro ul.footer-links {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .footer-pro ul.footer-links li {
+            margin-bottom: 0.65rem;
+        }
+
+        .footer-pro ul.footer-links a {
+            color: rgba(255, 255, 255, 0.65);
+            font-size: 0.9rem;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: color 0.2s ease, gap 0.2s ease;
+        }
+
+        .footer-pro ul.footer-links a i {
+            font-size: 0.7rem;
+            opacity: 0.7;
+        }
+
+        .footer-pro ul.footer-links a:hover {
+            color: #fff;
+            gap: 0.7rem;
+        }
+
+        .footer-pro .footer-contact-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.75rem;
+            margin-bottom: 1rem;
+            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.65);
+        }
+
+        .footer-pro .footer-contact-item i {
+            color: var(--accent);
+            font-size: 0.95rem;
+            margin-top: 0.15rem;
+            flex-shrink: 0;
+        }
+
+        .footer-pro .footer-social {
+            display: flex;
+            gap: 0.6rem;
+            margin-top: 1.25rem;
+        }
+
+        .footer-pro .footer-social a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 38px;
+            height: 38px;
+            border-radius: 8px;
+            background: rgba(255, 255, 255, 0.07);
+            color: rgba(255, 255, 255, 0.75);
+            font-size: 0.95rem;
+            text-decoration: none;
+            transition: background-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
+        }
+
+        .footer-pro .footer-social a:hover {
+            background: var(--accent);
+            color: #fff;
+            transform: translateY(-2px);
+        }
+
+        .footer-pro .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
+            margin-top: 3rem;
+            padding: 1.5rem 0;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+            gap: 0.75rem;
+            font-size: 0.85rem;
+            color: rgba(255, 255, 255, 0.55);
+        }
+
+        .footer-pro .footer-bottom a {
+            color: rgba(255, 255, 255, 0.7);
+            text-decoration: none;
+            transition: color 0.2s ease;
+        }
+
+        .footer-pro .footer-bottom a:hover {
+            color: #fff;
+        }
+
+        /* ============================================================
+           RESPONSIVE TWEAKS
+           ============================================================ */
+        @media (max-width: 767.98px) {
+            .hero-section h1 {
+                font-size: 1.9rem;
+            }
+
+            .section-heading h2 {
+                font-size: 1.6rem;
+            }
+
+            .service-card {
+                padding: 1.5rem 1.25rem;
+            }
+
+            .contact-info-card,
+            .contact-form-card {
+                padding: 1.75rem 1.5rem;
+            }
+
+            .footer-pro .footer-bottom {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+    </style>
 </head>
-<style>
-    .text-white {
-        color: white;
-    }
-</style>
-<header>
-    <nav class="navbar lg:navbar-expand bg-danger">
-        <div class="container-fluid">
-            <a href="#" class="navbar-brand">
-                <i class="fa fa-universal-access" aria-hidden="true"></i> Asad Mukhtar
-            </a>
-            <button class="btn-icon navbar-toggler" type="button" data-bs-toggle="drawer" data-bs-target="#navbarDrawer"
-                aria-controls="navbarDrawer" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon" aria-hidden="true"></span>
-            </button>
-            <dialog class="drawer drawer-end" tabindex="-1" id="navbarDrawer" aria-labelledby="navbarDrawerLabel">
-                <div class="drawer-header">
-                    <h5 class="drawer-title" id="navbarDrawerLabel">Menu</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="drawer" aria-label="Close"></button>
-                </div>
-                <div class="drawer-body mb-2 md:mb-0">
-                    <ul class="nav navbar-nav mw-auto">
-                        <li class="nav-item">
-                            <a href="#" class="nav-link text-white"><i class="fa fa-home"></i> Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="#" class="nav-link text-white"><i class="fa fa-info-circle"></i> About</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="#" class="nav-link text-white"><i class="fa fa-cubes"></i> Products</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="#" class="nav-link text-white"><i class="fa fa-envelope"></i> Contact</a>
-                        </li>
 
+<body>
+
+    <!-- =========================== HEADER / NAVBAR =========================== -->
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-pro fixed-top" id="mainNav">
+            <div class="container">
+                <a href="#" class="navbar-brand">
+                    <span class="brand-mark"><i class="fa fa-bolt" aria-hidden="true"></i></span>
+                    Asad&nbsp;Mukhtar
+                </a>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#proNav"
+                    aria-controls="proNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="proNav">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#home">
+                                <i class="fa fa-home" aria-hidden="true"></i> Home
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#about">
+                                <i class="fa fa-user" aria-hidden="true"></i> About
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#services">
+                                <i class="fa fa-th-list" aria-hidden="true"></i> Services
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#products">
+                                <i class="fa fa-th-large" aria-hidden="true"></i> Products
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#contact">
+                                <i class="fa fa-envelope-o" aria-hidden="true"></i> Contact
+                            </a>
+                        </li>
+                    </ul>
+
+                    <ul class="navbar-nav align-items-lg-center">
+                        <li class="nav-item d-none d-lg-block">
+                            <span class="nav-divider"></span>
+                        </li>
+                        <li class="nav-item nav-cta-wrapper">
+                            <a href="#contact" class="btn-nav-cta d-inline-flex align-items-center gap-2">
+                                <i class="fa fa-sign-in" aria-hidden="true"></i> Hire Me
+                            </a>
+                        </li>
                     </ul>
                 </div>
-            </dialog>
+            </div>
+        </nav>
+    </header>
+
+    <!-- =========================== HERO =========================== -->
+    <section id="home" class="hero-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8">
+                    <h1><i class="fa fa-globe me-2" aria-hidden="true"></i>Welcome to asadmukhtar.online</h1>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor a, obcaecati assumenda optio
+                        tempora odit harum at et architecto quasi fugiat officia, saepe hic quod natus quisquam, minima
+                        velit pariatur ipsa aliquid voluptatum ratione quam dignissimos. Odio doloribus illum neque.
+                    </p>
+                    <form class="d-flex hero-search" role="search">
+                        <input class="form-control me-2" type="search" placeholder="Search something..."
+                            aria-label="Search" />
+                        <button class="btn btn-search" type="submit"><i class="fa fa-search"
+                                aria-hidden="true"></i></button>
+                    </form>
+                </div>
+            </div>
         </div>
-    </nav>
-</header>
-<div class="container">
-    <h2>Hello Asad</h2>
-</div>
-<script type="module" src="https://cdn.jsdelivr.net/npm/bootstrap@6.0.0-alpha.1/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-1a/pXj49ZQ1aHEmrJ+gMw1otqoVsYwlEnlD8mIfY2TV03r20Y0CN7uqx1tQogjPL"
-    crossorigin="anonymous"></script>
+    </section>
+
+    <!-- =========================== ABOUT =========================== -->
+    <section id="about" class="section-about">
+        <div class="container">
+            <div class="row align-items-center g-5">
+                <div class="col-lg-6">
+                    <h2><i class="fa fa-user me-2 text-primary" aria-hidden="true"></i>About Me</h2>
+                    <p>
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempora quas at inventore! In eveniet
+                        ratione recusandae, assumenda ullam quis porro facilis doloremque! Minus enim earum rem
+                        reprehenderit sed! Aliquam tempora dolorem error delectus neque! Illum vero atque accusamus
+                        libero iste reprehenderit blanditiis id inventore.
+                    </p>
+                    <p>
+                        Repudiandae aut reprehenderit aspernatur quod expedita molestias dolore consequuntur excepturi,
+                        asperiores repellendus adipisci iste enim delectus ducimus, mollitia ipsum accusamus hic atque!
+                        Eius odit facilis incidunt molestiae! Inventore eos voluptate voluptates, accusamus doloremque
+                        rerum ea aut fugit, eaque cum corporis suscipit.
+                    </p>
+                    <p class="mb-0">
+                        Veniam dicta suscipit excepturi esse laboriosam animi dolores ratione iste cumque, minima fugiat
+                        inventore eos eum, unde iure consectetur sapiente voluptatum et, cum cupiditate. Blanditiis aut
+                        eligendi tempora incidunt repellat error molestias voluptate aspernatur temporibus quaerat!
+                    </p>
+                </div>
+                <div class="col-lg-6">
+                    <div class="about-img-wrapper">
+                        <img src="images/course.webp" alt="About Asad Mukhtar">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- =========================== SERVICES =========================== -->
+    <section id="services" class="section-services">
+        <div class="container">
+            <div class="section-heading">
+                <span class="eyebrow">What I Do</span>
+                <h2>Our Services</h2>
+                <p>End-to-end digital solutions engineered to help your business grow, scale, and stand out.</p>
+            </div>
+            <div class="row g-4">
+                <!-- Service 1 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fa fa-mobile" aria-hidden="true"></i>
+                        </div>
+                        <h5>Mobile Application Development</h5>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui temporibus culpa vitae esse
+                            expedita commodi deleniti adipisci ullam, accusantium quo.
+                        </p>
+                        <a href="#" class="service-link">Learn more <i class="fa fa-arrow-right"
+                                aria-hidden="true"></i></a>
+                    </div>
+                </div>
+                <!-- Service 2 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fa fa-code" aria-hidden="true"></i>
+                        </div>
+                        <h5>Web Application Development</h5>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui temporibus culpa vitae esse
+                            expedita commodi deleniti adipisci ullam, accusantium quo.
+                        </p>
+                        <a href="#" class="service-link">Learn more <i class="fa fa-arrow-right"
+                                aria-hidden="true"></i></a>
+                    </div>
+                </div>
+                <!-- Service 3 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fa fa-line-chart" aria-hidden="true"></i>
+                        </div>
+                        <h5>Digital Marketing</h5>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui temporibus culpa vitae esse
+                            expedita commodi deleniti adipisci ullam, accusantium quo.
+                        </p>
+                        <a href="#" class="service-link">Learn more <i class="fa fa-arrow-right"
+                                aria-hidden="true"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- =========================== PRODUCTS =========================== -->
+    <section id="products" class="section-products">
+        <div class="container">
+            <div class="section-heading">
+                <span class="eyebrow">Our Work</span>
+                <h2>Featured Products</h2>
+                <p>A selection of digital products crafted with attention to detail and built to deliver real results.
+                </p>
+            </div>
+            <div class="row g-4">
+                <!-- Product 1 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="product-card">
+                        <div class="product-media">
+                            <span class="product-badge">New</span>
+                            <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                        </div>
+                        <div class="product-body">
+                            <h5>E-Commerce Platform</h5>
+                            <p>Scalable, secure, and feature-rich online store solution with payment gateway
+                                integration.</p>
+                            <div class="product-price">$1,299 <span>/ license</span></div>
+                            <a href="#" class="btn-product">View Details <i class="fa fa-arrow-right"
+                                    aria-hidden="true"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Product 2 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="product-card">
+                        <div class="product-media">
+                            <i class="fa fa-dashboard" aria-hidden="true"></i>
+                        </div>
+                        <div class="product-body">
+                            <h5>Admin Dashboard</h5>
+                            <p>Modern analytics dashboard with real-time charts, user management, and role-based access.
+                            </p>
+                            <div class="product-price">$899 <span>/ license</span></div>
+                            <a href="#" class="btn-product">View Details <i class="fa fa-arrow-right"
+                                    aria-hidden="true"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Product 3 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="product-card">
+                        <div class="product-media">
+                            <span class="product-badge">Popular</span>
+                            <i class="fa fa-wordpress" aria-hidden="true"></i>
+                        </div>
+                        <div class="product-body">
+                            <h5>Business Theme</h5>
+                            <p>Responsive, SEO-optimized WordPress theme designed for startups and agencies.</p>
+                            <div class="product-price">$599 <span>/ license</span></div>
+                            <a href="#" class="btn-product">View Details <i class="fa fa-arrow-right"
+                                    aria-hidden="true"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- =========================== CONTACT =========================== -->
+    <section id="contact" class="section-contact">
+        <div class="container">
+            <div class="section-heading">
+                <span class="eyebrow">Get In Touch</span>
+                <h2>Contact Me</h2>
+                <p>Have a project in mind or just want to say hello? I'd love to hear from you.</p>
+            </div>
+            <div class="row g-4">
+                <!-- Contact Info -->
+                <div class="col-lg-5">
+                    <div class="contact-info-card">
+                        <h4>Let's Work Together</h4>
+                        <p>Reach out through any of the channels below or drop a message using the form. I'll get back
+                            to you within 24 hours.</p>
+
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fa fa-map-marker" aria-hidden="true"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h6>Location</h6>
+                                <span>Lahore, Pakistan</span>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fa fa-envelope" aria-hidden="true"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h6>Email</h6>
+                                <span>hello@asadmukhtar.online</span>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fa fa-phone" aria-hidden="true"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h6>Phone</h6>
+                                <span>+92 300 1234567</span>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fa fa-clock-o" aria-hidden="true"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h6>Working Hours</h6>
+                                <span>Mon – Fri, 9:00 AM – 6:00 PM</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <div class="col-lg-7">
+                    <div class="contact-form-card">
+                        <form>
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <label for="name" class="form-label">Full Name</label>
+                                    <input type="text" class="form-control" id="name" placeholder="Your name" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="email" class="form-label">Email Address</label>
+                                    <input type="email" class="form-control" id="email" placeholder="you@example.com"
+                                        required>
+                                </div>
+                                <div class="col-12">
+                                    <label for="subject" class="form-label">Subject</label>
+                                    <input type="text" class="form-control" id="subject"
+                                        placeholder="What is this about?" required>
+                                </div>
+                                <div class="col-12">
+                                    <label for="message" class="form-label">Message</label>
+                                    <textarea class="form-control" id="message"
+                                        placeholder="Tell me about your project..." required></textarea>
+                                </div>
+                                <div class="col-12">
+                                    <button type="submit" class="btn btn-contact-submit">
+                                        <i class="fa fa-paper-plane me-2" aria-hidden="true"></i> Send Message
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- =========================== FOOTER =========================== -->
+    <footer class="footer-pro">
+        <div class="container">
+            <div class="row g-4">
+                <!-- Brand + About -->
+                <div class="col-lg-4 col-md-6">
+                    <a href="#home" class="footer-brand">
+                        <span class="brand-mark"><i class="fa fa-bolt" aria-hidden="true"></i></span>
+                        Asad&nbsp;Mukhtar
+                    </a>
+                    <p class="footer-about">
+                        Building fast, reliable, and beautiful digital products for businesses of all sizes. Let's turn
+                        your idea into something people love to use.
+                    </p>
+                    <div class="footer-social">
+                        <a href="#" aria-label="Facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+                        <a href="#" aria-label="GitHub"><i class="fa fa-github" aria-hidden="true"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="col-lg-2 col-md-6 col-6">
+                    <h6 class="footer-heading">Quick Links</h6>
+                    <ul class="footer-links">
+                        <li><a href="#home"><i class="fa fa-angle-right" aria-hidden="true"></i> Home</a></li>
+                        <li><a href="#about"><i class="fa fa-angle-right" aria-hidden="true"></i> About</a></li>
+                        <li><a href="#services"><i class="fa fa-angle-right" aria-hidden="true"></i> Services</a></li>
+                        <li><a href="#products"><i class="fa fa-angle-right" aria-hidden="true"></i> Products</a></li>
+                        <li><a href="#contact"><i class="fa fa-angle-right" aria-hidden="true"></i> Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Services -->
+                <div class="col-lg-3 col-md-6 col-6">
+                    <h6 class="footer-heading">Services</h6>
+                    <ul class="footer-links">
+                        <li><a href="#services"><i class="fa fa-angle-right" aria-hidden="true"></i> Mobile
+                                Development</a></li>
+                        <li><a href="#services"><i class="fa fa-angle-right" aria-hidden="true"></i> Web Development</a>
+                        </li>
+                        <li><a href="#services"><i class="fa fa-angle-right" aria-hidden="true"></i> Digital
+                                Marketing</a></li>
+                        <li><a href="#services"><i class="fa fa-angle-right" aria-hidden="true"></i> UI/UX Design</a>
+                        </li>
+                        <li><a href="#services"><i class="fa fa-angle-right" aria-hidden="true"></i> Consulting</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Info -->
+                <div class="col-lg-3 col-md-6">
+                    <h6 class="footer-heading">Get In Touch</h6>
+                    <div class="footer-contact-item">
+                        <i class="fa fa-map-marker" aria-hidden="true"></i>
+                        <span>Lahore, Pakistan</span>
+                    </div>
+                    <div class="footer-contact-item">
+                        <i class="fa fa-envelope" aria-hidden="true"></i>
+                        <span>hello@asadmukhtar.online</span>
+                    </div>
+                    <div class="footer-contact-item">
+                        <i class="fa fa-phone" aria-hidden="true"></i>
+                        <span>+92 300 1234567</span>
+                    </div>
+                    <div class="footer-contact-item">
+                        <i class="fa fa-clock-o" aria-hidden="true"></i>
+                        <span>Mon – Fri, 9:00 AM – 6:00 PM</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Footer Bottom -->
+            <div class="footer-bottom">
+                <span>&copy; 2026 Asad Mukhtar. All rights reserved.</span>
+                <span>
+                    <a href="#">Privacy Policy</a> &nbsp;·&nbsp;
+                    <a href="#">Terms of Service</a>
+                </span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- =========================== SCRIPTS =========================== -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+
+    <script>
+        // Navbar scroll shadow
+        const nav = document.getElementById('mainNav');
+        window.addEventListener('scroll', () => {
+            nav.classList.toggle('scrolled', window.scrollY > 10);
+        });
+
+        // Active link highlighting based on scroll position
+        const sections = document.querySelectorAll('section[id]');
+        const navLinks = document.querySelectorAll('.navbar-pro .nav-link');
+
+        window.addEventListener('scroll', () => {
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop - 100;
+                if (window.scrollY >= sectionTop) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                const href = link.getAttribute('href');
+                if (href === '#' + current) {
+                    link.classList.add('active');
+                }
+            });
+        });
+    </script>
 </body>
 
 </html>
